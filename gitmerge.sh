@@ -16,12 +16,12 @@ echo "continuando..."
 GIT=git
 
 $GIT stash
-$GIT checkout $MASTER   && \
-$GIT svn rebase         && \
-$GIT checkout $BRANCH   && \
-$GIT rebase $MASTER     && \
-$GIT checkout $MASTER   && \
-$GIT merge --ff $BRANCH || exit 2
+$GIT checkout $MASTER                          && \
+$GIT svn rebase -A ~/.authors-transform.txt && \
+$GIT checkout $BRANCH                          && \
+$GIT rebase $MASTER                            && \
+$GIT checkout $MASTER                          && \
+$GIT merge --ff $BRANCH                        || exit 2
 
 echo "Pronto para o git svn dcommit"
 echo
