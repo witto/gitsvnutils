@@ -17,7 +17,8 @@ GIT=git
 
 $GIT stash
 $GIT checkout $MASTER                          && \
-$GIT svn rebase -A ~/.authors-transform.txt && \
+#$GIT svn rebase -A ~/.authors-transform.txt && \
+$GIT svn rebase && \
 $GIT checkout $BRANCH                          && \
 $GIT rebase $MASTER                            && \
 $GIT checkout $MASTER                          && \

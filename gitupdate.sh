@@ -15,7 +15,8 @@ echo "continuando..."
 
 $GIT stash || exit
 $GIT checkout $MASTER || exit
-$GIT svn rebase -A ~/.authors-transform.txt || exit
+#$GIT svn rebase -A ~/.authors-transform.txt || exit
+$GIT svn rebase || exit
 
 if [ "$BRANCH" != "$MASTER" ]
 then

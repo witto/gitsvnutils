@@ -2,7 +2,8 @@
 
 . ~/bin/gitmerge.sh
 
-$GIT svn dcommit -A ~/.authors-transform.txt && \
+#$GIT svn dcommit -A ~/.authors-transform.txt && \
+$GIT svn dcommit && \
 $GIT checkout $BRANCH && \
 $GIT rebase $MASTER && \
 $GIT stash pop || exit 3
